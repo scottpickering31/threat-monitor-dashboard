@@ -1,22 +1,29 @@
+import {
+  LayoutDashboard,
+  AlertTriangle,
+  Monitor,
+  Settings,
+} from "lucide-react";
+
 export const sidebarPages = [
   {
     name: "Dashboard",
     path: "/dashboard",
-    icon: "d",
+    icon: LayoutDashboard,
   },
   {
     name: "Alerts",
     path: "/alerts",
-    icon: "n",
+    icon: AlertTriangle,
   },
   {
     name: "Devices",
     path: "/devices",
-    icon: "d",
+    icon: Monitor,
   },
   {
     name: "Settings",
     path: "/settings",
-    icon: "s",
+    icon: Settings,
   },
 ];

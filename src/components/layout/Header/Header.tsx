@@ -1,7 +1,5 @@
-import BellIcon from "@/components/ui/Icons/BellIcon";
+import { Bell, CircleHelp, Search } from "lucide-react";
 import styles from "./Header.module.css";
-import HelpIcon from "@/components/ui/Icons/HelpIcon";
-import SearchIcon from "@/components/ui/Icons/SearchIcon";
 
 export default function Header() {
   return (
@@ -10,7 +8,7 @@ export default function Header() {
         <h1 className={styles.header_title}>Alerts</h1>
         <label className={styles.search} aria-label="Search system threats">
           <span className={styles.search_icon}>
-            <SearchIcon />
+            <Search className={styles.icon} aria-hidden="true" strokeWidth={1.9} />
           </span>
           <input
             type="search"
@@ -25,14 +23,18 @@ export default function Header() {
           className={styles.icon_button}
           aria-label="Open notifications"
         >
-          <BellIcon />
+          <Bell className={styles.icon} aria-hidden="true" strokeWidth={1.9} />
         </button>
         <button
           type="button"
           className={styles.icon_button}
           aria-label="Open help"
         >
-          <HelpIcon />
+          <CircleHelp
+            className={styles.icon}
+            aria-hidden="true"
+            strokeWidth={1.9}
+          />
         </button>
         <div className={styles.header_divider} aria-hidden="true" />
         <div className={styles.live_status} aria-live="polite">
