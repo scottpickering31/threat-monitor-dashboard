@@ -1,0 +1,91 @@
+:root {
+  /* Font families */
+  --font-family-base: "Inter", system-ui, sans-serif;
+  --font-family-heading: "Manrope", system-ui, sans-serif;
+
+  /* Font sizes */
+  --font-size-body-sm: 0.875rem;
+  --font-size-body-md: 1rem;
+  --font-size-body-lg: 1.25rem;
+  --font-size-threat-lg: 3.5rem;
+  --font-size-headline-lg: 1.5rem;
+  --font-size-label-sm: 0.6875rem;
+
+  /* Font Weights */
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --line-height-body: 1.25rem;
+  --line-height-heading: 1.5rem;
+  --line-height-title: 1.75rem;
+
+  /* Spacing */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+
+  /* Radius */
+  --radius-md: 0.5rem;
+  --radius-full: 999px;
+
+  /* Core colors */
+  --color-primary: #3b82f6;
+  --color-primary-container: #004395;
+  --color-secondary: #94a3b8;
+  --color-tertiary: #f97316;
+
+  /* Surface hierarchy */
+  --color-surface: #0b0e14;
+  --color-surface-container-low: #0f131c;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container: #141a25;
+  --color-surface-container-highest: #1d2637;
+  --color-surface-glass: rgb(20 26 37 / 70%);
+
+  /* Text */
+  --color-text-on-primary: #ffffff;
+  --color-text-on-surface: #dce5fd;
+  --color-text-on-surface-variant: #a2abc1;
+  --color-text-title: #adc6ff;
+  --color-text-input: rgb(162 171 193);
+
+  /* Outline */
+  --color-outline-variant: #3f485a;
+  --color-outline-ghost: rgb(63 72 90 / 18%);
+  --border-ghost: 1px solid var(--color-outline-ghost);
+
+  /* Shadows */
+  --shadow-diffuse: 0px 24px 48px rgb(0 0 0 / 40%);
+
+  /* Blur */
+  --blur-glass-md: 20px;
+
+  /* Gradients */
+  --gradient-primary-cta: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-container) 100%
+  );
+
+  --gradient-button-highlight: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 5%) 0%,
+    rgb(255 255 255 / 0%) 45%
+  );
+
+  /* Severity badges */
+  --color-badge-critical-text: #ee7d77;
+  --color-badge-critical-bg: #7f2927;
+
+  --color-badge-high-text: #f97316;
+  --color-badge-high-bg: #f77113;
+
+  --color-badge-medium-text: #324052;
+  --color-badge-medium-bg: #d4e4fa;
+
+  --color-badge-low-text: #3b82f6;
+  --color-badge-low-bg: #004395;
+}

@@ -1,0 +1,22 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.text-muted {
+  color: var(--color-text-on-surface-variant);
+}
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.glass {
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(var(--blur-glass-md));
+}

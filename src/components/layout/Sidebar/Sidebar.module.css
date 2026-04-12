@@ -1,0 +1,30 @@
+.sidebar {
+  gap: 10px;
+  height: 100dvh;
+  background-color: var(--color-surface-container-low);
+  z-index: 50;
+  padding: 1.5rem;
+}
+
+.sidebar p {
+  color: var(--color-text-on-surface-variant);
+}
+
+.sidebar_pages {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.title_container {
+  padding: 0.75rem;
+}
+
+.title {
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-title);
+  line-height: var(--line-height-title);
+  letter-spacing: -0.01em;
+}
