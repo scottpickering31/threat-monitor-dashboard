@@ -28,6 +28,7 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-title);
   letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
 .tagline {

@@ -1,14 +1,27 @@
 import { Bell, CircleHelp, Search } from "lucide-react";
+import { sidebarPages } from "@/features/alerts/constants/sidebarPages";
+import { useLocation } from "react-router";
+
 import styles from "./Header.module.css";
 
 export default function Header() {
+  // Set header title depending on current page
+  const location = useLocation();
+  const currentPage = sidebarPages.find(
+    (page) => page.path === location.pathname,
+  );
+
   return (
     <header className={styles.header}>
       <div className={styles.header_left}>
-        <h1 className={styles.header_title}>Alerts</h1>
+        <h1 className={styles.header_title}>{currentPage?.name}</h1>
         <label className={styles.search} aria-label="Search system threats">
           <span className={styles.search_icon}>
-            <Search className={styles.icon} aria-hidden="true" strokeWidth={1.9} />
+            <Search
+              className={styles.icon}
+              aria-hidden="true"
+              strokeWidth={1.9}
+            />
           </span>
           <input
             type="search"

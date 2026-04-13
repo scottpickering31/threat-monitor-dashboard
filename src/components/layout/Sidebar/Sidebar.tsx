@@ -1,15 +1,15 @@
 import { ShieldUser } from "lucide-react";
 import { sidebarPages } from "@/features/alerts/constants/sidebarPages";
 import styles from "./Sidebar.module.css";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import SidebarIcon from "./SidebarIcon";
 
 export default function Sidebar() {
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.brand}>
-        <p className={styles.title}>Threat Monitor</p>
-      </div>
+      <Link to={"/dashboard"} className={styles.title}>
+        <div className={styles.brand}>Threat Monitor</div>
+      </Link>
 
       <nav className={styles.navigation} aria-label="Primary">
         {sidebarPages.map((page) => {
