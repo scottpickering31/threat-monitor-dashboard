@@ -1,0 +1,9 @@
+.page {
+  padding: 1rem 0 0;
+}
+
+.title {
+  color: var(--color-text-on-surface);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+}

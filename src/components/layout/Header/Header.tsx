@@ -1,6 +1,6 @@
 import { Bell, CircleHelp, Search } from "lucide-react";
-import { sidebarPages } from "@/features/alerts/constants/sidebarPages";
-import { useLocation } from "react-router";
+import { sidebarPages } from "@/features/constants/sidebarPages";
+import { useLocation } from "react-router-dom";
 
 import styles from "./Header.module.css";
 
@@ -14,7 +14,9 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header_left}>
-        <h1 className={styles.header_title}>{currentPage?.name}</h1>
+        <h1 className={styles.header_title}>
+          {currentPage?.name ?? "Dashboard"}
+        </h1>
         <label className={styles.search} aria-label="Search system threats">
           <span className={styles.search_icon}>
             <Search

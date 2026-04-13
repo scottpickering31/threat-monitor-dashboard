@@ -1,11 +1,14 @@
+import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import styles from "./Page.module.css";
 
-export default function Page({ children }: { children: React.ReactNode }) {
+export default function Page() {
   return (
-    <div className={styles.page_body}>
+    <main className={styles.page_body}>
       <Header />
-      {children}
-    </div>
+      <div className={styles.page_content}>
+        <Outlet />
+      </div>
+    </main>
   );
 }

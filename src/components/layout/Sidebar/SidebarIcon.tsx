@@ -6,7 +6,5 @@ type SidebarIconProps = {
 };
 
 export default function SidebarIcon({ icon: Icon }: SidebarIconProps) {
-  return (
-    <Icon className={styles.nav_icon} strokeWidth={1.9} aria-hidden="true" />
-  );
+  return <Icon className={styles.icon} strokeWidth={1.9} aria-hidden="true" />;
 }

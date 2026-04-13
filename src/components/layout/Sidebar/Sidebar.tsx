@@ -1,7 +1,7 @@
 import { ShieldUser } from "lucide-react";
-import { sidebarPages } from "@/features/alerts/constants/sidebarPages";
+import { sidebarPages } from "@/features/constants/sidebarPages";
 import styles from "./Sidebar.module.css";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink } from "react-router-dom";
 import SidebarIcon from "./SidebarIcon";
 
 export default function Sidebar() {
@@ -15,6 +15,7 @@ export default function Sidebar() {
         {sidebarPages.map((page) => {
           return (
             <NavLink
+              key={page.path}
               to={page.path}
               className={({ isActive }) =>
                 `${styles.nav_item} ${isActive ? styles.nav_item_active : ""}`
