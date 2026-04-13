@@ -1,24 +1,25 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "@/styles/index.css";
-import App from "@/App";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 import Dashboard from "./app/dashboard";
 import Alerts from "./app/alerts";
 import Devices from "./app/devices";
 import Settings from "./app/settings";
+import AppShell from "./components/layout/AppShell/AppShell";
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <StrictMode>
-      <App />
+  <StrictMode>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/alerts" element={<Alerts />} />
-        <Route path="/devices" element={<Devices />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route element={<AppShell />}>
+          <Route index element={<Navigate to="/dashboard" replace />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="alerts" element={<Alerts />} />
+          <Route path="devices" element={<Devices />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
       </Routes>
-    </StrictMode>
-  </BrowserRouter>,
+    </BrowserRouter>
+  </StrictMode>,
 );

@@ -1,13 +1,12 @@
-import Page from "../Page/Page";
-import Sidebar from "../Sidebar/Sidebar";
-
+import { Outlet } from "react-router";
 import styles from "./AppShell.module.css";
+import Header from "../Header/Header";
 
-export default function AppShell() {
+export default function Page() {
   return (
-    <div className={styles.AppShell}>
-      <Sidebar />
-      <Page />
+    <div className={styles.page_body}>
+      <Header />
+      <Outlet />
     </div>
   );
 }
