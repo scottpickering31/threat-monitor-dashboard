@@ -1,58 +1,13 @@
-.vitals_card_positive,
-.vitals_card_negative {
+.dark_card,
+.light_card {
   border-radius: var(--radius-md);
   padding: 2rem;
 }
 
-.vitals_trending_positive,
-.vitals_trending_negative,
-.vitals_row_positive,
-.vitals_row_negative {
-  display: flex;
-  flex-direction: row;
-}
-
-.vitals_row_negative,
-.vitals_row_positive {
-  gap: 1rem;
-}
-
-.vitals_card_positive {
-  background-color: var(--color-surface-container);
-}
-
-.vitals_card_negative {
+.dark_card {
   background-color: var(--color-surface-container-low);
-  border: 0.5px solid var(--color-badge-critical-text);
 }
 
-.vitals_row_negative {
-  color: var(--color-badge-critical-text);
-}
-
-.vitals_title,
-.vitals_trending {
-  font-size: var(--font-size-body-lg);
-}
-
-.vitals_trending_negative,
-.vitals_trending_positive {
-  align-items: center;
-}
-
-.vitals_trending_negative {
-  color: var(--color-badge-critical-text);
-}
-
-.vitals_trending_positive {
-  color: var(--color-text-title);
-}
-
-.vitals_icon {
-  margin-right: 0.2rem;
-}
-
-.vitals_total {
-  font-size: var(--font-size-threat-lg);
-  font-weight: var(--font-weight-bold);
+.light_card {
+  background-color: var(--color-surface-container);
 }

@@ -1,0 +1,52 @@
+import type { TrendingDown, TrendingUp, TrendingUpDown } from "lucide-react";
+import clsx from "clsx";
+import styles from "./DashboardVitalCard.module.css";
+import Card from "@/components/ui/Card/Card";
+
+interface DashboardVitalCardProps {
+  title: string;
+  total: string;
+  trending: typeof TrendingUp | typeof TrendingDown | typeof TrendingUpDown;
+  percentage: number;
+}
+
+export default function DashboardVitalCard({
+  title,
+  total,
+  percentage,
+  trending: TrendIcon,
+}: DashboardVitalCardProps) {
+  const isPositive = percentage > 0;
+  const isNegative = percentage < 0;
+  const isNeutral = percentage === 0;
+  const trendLabel = isPositive ? `+${percentage}%` : `${percentage}%`;
+
+  return (
+    <Card
+      light={!isNegative}
+      className={clsx({
+        [styles.vitals_card_negative]: isNegative,
+        [styles.vitals_card_neutral]: isNeutral,
+      })}
+    >
+      <p className={styles.vitals_title}>{title}</p>
+      <div className={styles.vitals_row}>
+        <p className={styles.vitals_total}>{total}</p>
+        <div
+          className={clsx(styles.vitals_trending, {
+            [styles.vitals_trending_positive]: isPositive,
+            [styles.vitals_trending_negative]: isNegative,
+            [styles.vitals_trending_neutral]: isNeutral,
+          })}
+        >
+          <TrendIcon
+            size={16}
+            className={styles.vitals_icon}
+            strokeWidth={1.9}
+          />
+          <p>{trendLabel}</p>
+        </div>
+      </div>
+    </Card>
+  );
+}

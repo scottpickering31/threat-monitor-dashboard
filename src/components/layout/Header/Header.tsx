@@ -1,8 +1,9 @@
-import { Bell, CircleHelp, Search } from "lucide-react";
+import { Bell, CircleHelp } from "lucide-react";
 import { sidebarPages } from "@/features/constants/sidebarPages";
 import { useLocation } from "react-router-dom";
 
 import styles from "./Header.module.css";
+import Input from "@/components/ui/Input/Input";
 
 export default function Header() {
   // Set header title depending on current page
@@ -17,20 +18,7 @@ export default function Header() {
         <h1 className={styles.header_title}>
           {currentPage?.name ?? "Dashboard"}
         </h1>
-        <label className={styles.search} aria-label="Search system threats">
-          <span className={styles.search_icon}>
-            <Search
-              className={styles.icon}
-              aria-hidden="true"
-              strokeWidth={1.9}
-            />
-          </span>
-          <input
-            type="search"
-            placeholder="Search system threats..."
-            className={styles.input_field}
-          />
-        </label>
+        <Input />
       </div>
       <div className={styles.header_right}>
         <button
