@@ -9,6 +9,8 @@ import { selectOptions } from "@/features/constants/selectOptions";
 import Button from "@/components/ui/Button/Button";
 import AlertCard from "../components/AlertCard/AlertCard";
 import { filterAndSortAlerts } from "../utils/filterAndSortAlerts";
+import ThreatActivityCard from "../components/ThreatActivityCard/ThreatActivityCard";
+import AnalystCoverageCard from "../components/AnalystCoverageCard/AnalystCoverageCard";
 
 export default function DashboardPage() {
   const [selectedFilters, setSelectedFilters] = useState<Record<string, string>>({
@@ -55,6 +57,10 @@ export default function DashboardPage() {
       </div>
       <div className={styles.alerts}>
         <AlertCard alerts={filteredAlerts} />
+      </div>
+      <div className={styles.insights}>
+        <ThreatActivityCard />
+        <AnalystCoverageCard />
       </div>
     </section>
   );
