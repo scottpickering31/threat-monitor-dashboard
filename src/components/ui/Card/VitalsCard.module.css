@@ -4,6 +4,17 @@
   flex-direction: row;
 }
 
+.vitals_total_neutral,
+.vitals_total_positive,
+.vitals_total_negative {
+  font-size: var(--font-size-threat-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.vitals_title {
+  color: var(--color-text-on-surface-variant);
+}
+
 .vitals_row {
   gap: 1rem;
 }
@@ -21,10 +32,6 @@
   font-size: var(--font-size-body-lg);
 }
 
-.vitals_title {
-  color: var(--color-text-on-surface-variant);
-}
-
 .vitals_trending {
   align-items: center;
 }
@@ -37,15 +44,10 @@
   color: var(--color-text-title);
 }
 
-.vitals_trending_neutral {
-  color: var(--color-text-on-surface-variant);
-}
-
 .vitals_icon {
   margin-right: 0.2rem;
 }
 
-.vitals_total {
-  font-size: var(--font-size-threat-lg);
-  font-weight: var(--font-weight-bold);
+.vitals_total_negative {
+  color: var(--color-badge-critical-text);
 }

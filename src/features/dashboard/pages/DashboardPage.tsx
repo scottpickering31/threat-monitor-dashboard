@@ -1,16 +1,18 @@
-import DashboardVitalCard from "@/features/dashboard/components/DashboardVitalCard";
-import { alertCardMock } from "@/mocks/data/alertCardMock";
+import VitalsCard from "@/components/ui/Card/VitalsCard";
+import { alertVitalsCardMock } from "@/mocks/data/alertVitalsCardMock";
 import styles from "./DashboardPage.module.css";
 import { getTrendIcon } from "../utils/getTrendIcon";
 import SelectRow from "@/components/ui/Select/SelectRow";
 import { selectOptions } from "@/features/constants/selectOptions";
+import Button from "@/components/ui/Button/Button";
+import AlertCard from "../components/AlertCard/AlertCard";
 
 export default function DashboardPage() {
   return (
     <section className={styles.page}>
       <div className={styles.grid}>
-        {alertCardMock.map((alert) => (
-          <DashboardVitalCard
+        {alertVitalsCardMock.map((alert) => (
+          <VitalsCard
             key={alert.title}
             title={alert.title}
             total={alert.total}
@@ -19,8 +21,17 @@ export default function DashboardPage() {
           />
         ))}
       </div>
-      <div>
+      <div className={styles.button_select_header}>
         <SelectRow selectOptions={selectOptions} />
+        <Button size={"md"} variant={"tertiary"} text="title">
+          Export Report
+        </Button>
+        <Button size={"md"} variant={"secondary"} text="light">
+          Manage Rules
+        </Button>
+      </div>
+      <div className={styles.alerts}>
+        <AlertCard />
       </div>
     </section>
   );

@@ -1,0 +1,54 @@
+.button {
+  padding: 0.875rem 1rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font: inherit;
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  width: min(12rem, 100%);
+  min-width: 8rem;
+}
+
+.primary {
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+}
+
+.secondary {
+  background: var(--color-surface-container);
+  color: var(--color-text-on-surface);
+}
+
+.tertiary {
+  background: var(--color-text-title);
+  color: var(--color-text-on-surface);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-text-on-surface);
+  border: var(--border-ghost);
+}
+
+.light {
+  color: var(--color-text-on-primary);
+}
+
+.title {
+  color: var(--color-badge-medium-text);
+}
+
+.default {
+}
+
+.sm {
+  padding: 0.5rem 0.75rem;
+}
+
+.md {
+  padding: 0.875rem 1rem;
+}
+
+.lg {
+  padding: 1rem 1.25rem;
+}

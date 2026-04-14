@@ -1,14 +1,14 @@
 import clsx from "clsx";
-import styles from "./DashboardVitalCard.module.css";
+import styles from "./VitalsCard.module.css";
 import Card from "@/components/ui/Card/Card";
-import type { DashboardVitalCardProps } from "../types/DashboardVitalCard";
+import type { VitalCardTypes } from "./VitalsCardTypes";
 
 export default function DashboardVitalCard({
   title,
   total,
   percentage,
   trending: TrendIcon,
-}: DashboardVitalCardProps) {
+}: VitalCardTypes) {
   // Styling based on percentage
   const isPositive = percentage > 0;
   const isNegative = percentage < 0;
@@ -25,7 +25,15 @@ export default function DashboardVitalCard({
     >
       <p className={styles.vitals_title}>{title}</p>
       <div className={styles.vitals_row}>
-        <p className={styles.vitals_total}>{total}</p>
+        <p
+          className={clsx({
+            [styles.vitals_total_positive]: isPositive,
+            [styles.vitals_total_negative]: isNegative,
+            [styles.vitals_total_neutral]: isNeutral,
+          })}
+        >
+          {total}
+        </p>
         <div
           className={clsx(styles.vitals_trending, {
             [styles.vitals_trending_positive]: isPositive,

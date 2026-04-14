@@ -1,5 +1,10 @@
+.button_select_header,
+.alerts {
+  margin-top: 3rem;
+}
+
 .page {
-  padding: 1rem 0 0;
+  padding: 0.5rem;
 }
 
 .grid {
@@ -8,9 +13,12 @@
   gap: 1.5rem;
 }
 
-.select_header {
-  display: flex;
+.alerts {
+}
 
-  margin-top: 2rem;
+.button_select_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
 }

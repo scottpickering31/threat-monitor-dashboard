@@ -1,8 +1,9 @@
 .select_row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 3rem;
+  width: 100%;
 }
 
 .select_wrapper {
