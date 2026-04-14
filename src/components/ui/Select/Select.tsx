@@ -1,24 +1,25 @@
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
 import styles from "./Select.module.css";
 
 interface SelectProps {
   name: string;
   values: string[];
+  selectedValue: string;
   isActive?: boolean;
   onToggle: () => void;
   onClose: () => void;
+  onValueChange: (value: string) => void;
 }
 
 export default function Select({
   name,
   values,
+  selectedValue,
   isActive = false,
   onToggle,
   onClose,
+  onValueChange,
 }: SelectProps) {
-  const [selectedValue, setSelectedValue] = useState(values[0] ?? "");
-
   return (
     <div className={styles.select_wrapper}>
       <button
@@ -50,7 +51,7 @@ export default function Select({
                 type="button"
                 className={styles.option}
                 onClick={() => {
-                  setSelectedValue(value);
+                  onValueChange(value);
                   onClose();
                 }}
               >

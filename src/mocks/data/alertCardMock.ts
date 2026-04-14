@@ -8,6 +8,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "2 mins ago",
     device: "Server-01",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -17,6 +19,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "14 mins ago",
     device: "User-Workstation-12",
+    deviceType: "workstation",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -26,6 +30,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "5 mins ago",
     device: "Web-Gateway-02",
+    deviceType: "gateway",
+    iconKey: "shield",
     status: "Open",
   },
   {
@@ -35,6 +41,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "8 mins ago",
     device: "User-Laptop-07",
+    deviceType: "laptop",
+    iconKey: "laptop",
     status: "Open",
   },
   {
@@ -44,6 +52,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "12 mins ago",
     device: "Firewall-01",
+    deviceType: "firewall",
+    iconKey: "shield",
     status: "Open",
   },
   {
@@ -53,6 +63,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "20 mins ago",
     device: "User-PC-03",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -62,6 +74,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "25 mins ago",
     device: "Server-02",
+    deviceType: "server",
+    iconKey: "server",
     status: "Closed",
   },
   {
@@ -71,6 +85,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "30 mins ago",
     device: "User-Workstation-05",
+    deviceType: "workstation",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -80,6 +96,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "35 mins ago",
     device: "Auth-Server",
+    deviceType: "auth-server",
+    iconKey: "key",
     status: "Open",
   },
   {
@@ -89,6 +107,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "40 mins ago",
     device: "User-Laptop-02",
+    deviceType: "laptop",
+    iconKey: "laptop",
     status: "Closed",
   },
   {
@@ -98,6 +118,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "45 mins ago",
     device: "DNS-Server",
+    deviceType: "dns-server",
+    iconKey: "globe",
     status: "Open",
   },
   {
@@ -107,6 +129,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "50 mins ago",
     device: "DB-Server-01",
+    deviceType: "database",
+    iconKey: "database",
     status: "Open",
   },
   {
@@ -116,6 +140,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "1 hour ago",
     device: "User-PC-08",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Closed",
   },
   {
@@ -125,6 +151,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "1 hour ago",
     device: "Mail-Server",
+    deviceType: "mail-server",
+    iconKey: "mail",
     status: "Open",
   },
   {
@@ -134,6 +162,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "1 hour ago",
     device: "Server-03",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -143,6 +173,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "1 hour ago",
     device: "Backup-Server",
+    deviceType: "backup-server",
+    iconKey: "hard-drive",
     status: "Closed",
   },
   {
@@ -152,6 +184,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "1 hour ago",
     device: "API-Gateway",
+    deviceType: "gateway",
+    iconKey: "shield",
     status: "Open",
   },
   {
@@ -161,6 +195,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "2 hours ago",
     device: "Cloud-VM-01",
+    deviceType: "cloud-vm",
+    iconKey: "cloud",
     status: "Open",
   },
   {
@@ -170,6 +206,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "2 hours ago",
     device: "User-PC-11",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -179,6 +217,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "2 hours ago",
     device: "User-Laptop-04",
+    deviceType: "laptop",
+    iconKey: "laptop",
     status: "Closed",
   },
   {
@@ -188,6 +228,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "2 hours ago",
     device: "Server-05",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -197,6 +239,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "3 hours ago",
     device: "User-PC-09",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -206,6 +250,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "3 hours ago",
     device: "App-Server-02",
+    deviceType: "app-server",
+    iconKey: "server",
     status: "Closed",
   },
   {
@@ -215,6 +261,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "3 hours ago",
     device: "Auth-Server",
+    deviceType: "auth-server",
+    iconKey: "key",
     status: "Open",
   },
   {
@@ -224,6 +272,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "3 hours ago",
     device: "User-PC-06",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -233,6 +283,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "4 hours ago",
     device: "Router-01",
+    deviceType: "router",
+    iconKey: "router",
     status: "Closed",
   },
   {
@@ -242,6 +294,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "4 hours ago",
     device: "Server-Admin",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -251,6 +305,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "4 hours ago",
     device: "App-Server-03",
+    deviceType: "app-server",
+    iconKey: "server",
     status: "Closed",
   },
   {
@@ -260,6 +316,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "5 hours ago",
     device: "User-PC-10",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -269,6 +327,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "5 hours ago",
     device: "Server-04",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -278,6 +338,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "5 hours ago",
     device: "User-Directory",
+    deviceType: "directory",
+    iconKey: "users",
     status: "Closed",
   },
   {
@@ -287,6 +349,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "6 hours ago",
     device: "Server-06",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -296,6 +360,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "6 hours ago",
     device: "User-PC-12",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -305,6 +371,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "6 hours ago",
     device: "User-Laptop-09",
+    deviceType: "laptop",
+    iconKey: "laptop",
     status: "Open",
   },
   {
@@ -314,6 +382,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "7 hours ago",
     device: "VPN-Gateway",
+    deviceType: "gateway",
+    iconKey: "shield",
     status: "Closed",
   },
   {
@@ -323,6 +393,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "7 hours ago",
     device: "User-PC-14",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -332,6 +404,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "7 hours ago",
     device: "DB-Server-02",
+    deviceType: "database",
+    iconKey: "database",
     status: "Open",
   },
   {
@@ -341,6 +415,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "8 hours ago",
     device: "Web-Server-01",
+    deviceType: "web-server",
+    iconKey: "globe",
     status: "Closed",
   },
   {
@@ -350,6 +426,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "8 hours ago",
     device: "User-Laptop-11",
+    deviceType: "laptop",
+    iconKey: "laptop",
     status: "Closed",
   },
   {
@@ -359,6 +437,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "8 hours ago",
     device: "Server-07",
+    deviceType: "server",
+    iconKey: "server",
     status: "Closed",
   },
   {
@@ -368,6 +448,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "9 hours ago",
     device: "App-Server-04",
+    deviceType: "app-server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -377,6 +459,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "9 hours ago",
     device: "Server-08",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -386,6 +470,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "9 hours ago",
     device: "SIEM",
+    deviceType: "siem",
+    iconKey: "shield",
     status: "Open",
   },
   {
@@ -395,6 +481,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "10 hours ago",
     device: "Auth-Server",
+    deviceType: "auth-server",
+    iconKey: "key",
     status: "Open",
   },
   {
@@ -404,6 +492,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "10 hours ago",
     device: "User-PC-15",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
   {
@@ -413,6 +503,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "10 hours ago",
     device: "Server-09",
+    deviceType: "server",
+    iconKey: "server",
     status: "Closed",
   },
   {
@@ -422,6 +514,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "11 hours ago",
     device: "Server-10",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -431,6 +525,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "11 hours ago",
     device: "Mail-Server",
+    deviceType: "mail-server",
+    iconKey: "mail",
     status: "Open",
   },
   {
@@ -440,6 +536,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "medium",
     time: "11 hours ago",
     device: "User-Directory",
+    deviceType: "directory",
+    iconKey: "users",
     status: "Closed",
   },
   {
@@ -449,6 +547,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "low",
     time: "12 hours ago",
     device: "Update-Server",
+    deviceType: "update-server",
+    iconKey: "hard-drive",
     status: "Closed",
   },
   {
@@ -458,6 +558,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "high",
     time: "12 hours ago",
     device: "Server-11",
+    deviceType: "server",
+    iconKey: "server",
     status: "Open",
   },
   {
@@ -467,6 +569,8 @@ export const alertsCardMock: AlertCardMockTypes[] = [
     severity: "critical",
     time: "12 hours ago",
     device: "User-PC-16",
+    deviceType: "pc",
+    iconKey: "monitor",
     status: "Open",
   },
 ];

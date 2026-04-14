@@ -1,0 +1,5 @@
+.list {
+  background-color: var(--color-surface-container-low);
+  max-height: calc(var(--visible-row-count, 5) * var(--alert-row-height, 5.5rem));
+  overflow-y: auto;
+}

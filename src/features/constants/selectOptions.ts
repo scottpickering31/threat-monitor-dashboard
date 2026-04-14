@@ -1,18 +1,10 @@
 export const selectOptions = [
   {
-    name: "Severity",
-    values: [
-      "All",
-      "Alert Name",
-      "Severity",
-      "Device",
-      "Time",
-      "Status",
-      "Actions",
-    ],
+    name: "Sort By",
+    values: ["All", "Alert Name", "Severity", "Device", "Time"],
   },
   {
     name: "Status",
-    values: ["Open", "Resolved"],
+    values: ["All", "Open", "Closed"],
   },
 ];

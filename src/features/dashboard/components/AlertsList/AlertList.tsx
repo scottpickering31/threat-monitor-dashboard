@@ -1,10 +1,27 @@
-import { alertsCardMock } from "@/mocks/data/alertCardMock";
+import type { CSSProperties } from "react";
+import type { AlertCardMockTypes } from "@/mocks/types/alertMocks";
+import styles from "./AlertList.module.css";
 import AlertRow from "../AlertRow/AlertRow";
 
-export default function AlertsList() {
+type AlertsListProps = {
+  alerts: AlertCardMockTypes[];
+  visibleRowCount?: number;
+};
+
+export default function AlertsList({
+  alerts,
+  visibleRowCount = 5,
+}: AlertsListProps) {
   return (
-    <div>
-      {alertsCardMock.map((alert) => (
+    <div
+      className={styles.list}
+      style={
+        {
+          "--visible-row-count": visibleRowCount,
+        } as CSSProperties
+      }
+    >
+      {alerts.map((alert) => (
         <AlertRow key={alert.id} alert={alert} />
       ))}
     </div>

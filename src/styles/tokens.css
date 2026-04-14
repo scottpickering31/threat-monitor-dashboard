@@ -78,15 +78,15 @@
   );
 
   /* Severity badges */
-  --color-badge-critical-text: #ee7d77;
+  --color-badge-critical-text: #ffaaa5;
   --color-badge-critical-bg: #7f2927;
 
-  --color-badge-high-text: #f97316;
+  --color-badge-high-text: #ffc7a0;
   --color-badge-high-bg: #f77113;
 
   --color-badge-medium-text: #324052;
   --color-badge-medium-bg: #d4e4fa;
 
-  --color-badge-low-text: #3b82f6;
+  --color-badge-low-text: #7caefe;
   --color-badge-low-bg: #004395;
 }

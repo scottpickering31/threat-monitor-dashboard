@@ -5,6 +5,8 @@ export type AlertCardMockTypes = {
   severity: "low" | "medium" | "high" | "critical";
   time: string;
   device: string;
+  deviceType: string;
+  iconKey: string;
   status: "Open" | "Closed";
 };
 
