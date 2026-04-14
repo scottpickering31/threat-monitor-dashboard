@@ -2,7 +2,7 @@ import DashboardVitalCard from "@/features/dashboard/components/DashboardVitalCa
 import { alertCardMock } from "@/mocks/data/alertCardMock";
 import styles from "./DashboardPage.module.css";
 import { getTrendIcon } from "../utils/getTrendIcon";
-import Select from "@/components/ui/Select/Select";
+import SelectRow from "@/components/ui/Select/SelectRow";
 import { selectOptions } from "@/features/constants/selectOptions";
 
 export default function DashboardPage() {
@@ -19,10 +19,8 @@ export default function DashboardPage() {
           />
         ))}
       </div>
-      <div className={styles.select_header}>
-        {selectOptions.map((options) => {
-          return <Select name={options.name} values={options.values} />;
-        })}
+      <div>
+        <SelectRow selectOptions={selectOptions} />
       </div>
     </section>
   );
