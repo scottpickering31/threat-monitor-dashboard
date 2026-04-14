@@ -1,8 +1,9 @@
 import DashboardVitalCard from "@/features/dashboard/components/DashboardVitalCard";
-import { alertCardMock } from "@/features/constants/alertCardMock";
+import { alertCardMock } from "@/mocks/data/alertCardMock";
 import styles from "./DashboardPage.module.css";
 import { getTrendIcon } from "../utils/getTrendIcon";
 import Select from "@/components/ui/Select/Select";
+import { selectOptions } from "@/features/constants/selectOptions";
 
 export default function DashboardPage() {
   return (
@@ -18,8 +19,10 @@ export default function DashboardPage() {
           />
         ))}
       </div>
-      <div>
-        <Select />
+      <div className={styles.select_header}>
+        {selectOptions.map((options) => {
+          return <Select name={options.name} values={options.values} />;
+        })}
       </div>
     </section>
   );

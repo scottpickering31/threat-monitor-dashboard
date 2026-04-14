@@ -7,3 +7,7 @@
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 1.5rem;
 }
+
+.select_header {
+  margin-top: 2rem;
+}

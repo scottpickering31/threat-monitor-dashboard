@@ -12,9 +12,10 @@ dist
 dist-ssr
 *.local
 
-code.html 
-DESIGN.md
-screen.png
+# Local design reference files
+/code.html
+/DESIGN.md
+/screen.png
 
 
 

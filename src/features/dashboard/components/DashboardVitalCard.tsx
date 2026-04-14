@@ -1,14 +1,7 @@
-import type { TrendingDown, TrendingUp, TrendingUpDown } from "lucide-react";
 import clsx from "clsx";
 import styles from "./DashboardVitalCard.module.css";
 import Card from "@/components/ui/Card/Card";
-
-interface DashboardVitalCardProps {
-  title: string;
-  total: string;
-  trending: typeof TrendingUp | typeof TrendingDown | typeof TrendingUpDown;
-  percentage: number;
-}
+import type { DashboardVitalCardProps } from "../types/DashboardVitalCard";
 
 export default function DashboardVitalCard({
   title,
@@ -16,6 +9,7 @@ export default function DashboardVitalCard({
   percentage,
   trending: TrendIcon,
 }: DashboardVitalCardProps) {
+  // Styling based on percentage
   const isPositive = percentage > 0;
   const isNegative = percentage < 0;
   const isNeutral = percentage === 0;

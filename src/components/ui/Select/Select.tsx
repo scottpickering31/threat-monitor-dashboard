@@ -1,10 +1,16 @@
 import { ChevronDown } from "lucide-react";
+import styles from "./Select.module.css";
 
-export default function Select() {
+interface SelectProps {
+  name: string;
+  values: string[];
+}
+
+export default function Select({ name, values }: SelectProps) {
   return (
-    <div>
-      <p>Severity:</p>
-      <p>All</p>
+    <div className={styles.select}>
+      <p>{name}:</p>
+      <p>{values.join(", ")}</p>
       <ChevronDown />
     </div>
   );
