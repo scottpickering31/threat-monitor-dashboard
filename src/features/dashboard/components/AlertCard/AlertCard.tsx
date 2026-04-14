@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "@/components/ui/Card/Card";
 import AlertHeader from "../AlertHeader/AlertHeader";
-import AlertsList from "../AlertsList/AlertList";
+import AlertList from "../AlertList/AlertList";
 import AlertFooter from "../AlertFooter/AlertFooter";
 import styles from "./AlertCard.module.css";
 import type { AlertCardMockTypes } from "@/mocks/types/alertMocks";
@@ -18,23 +18,21 @@ export default function AlertCard({ alerts }: AlertCardProps) {
 
   const totalAlerts = alerts.length;
   const totalPages = Math.max(1, Math.ceil(totalAlerts / pageSize));
-  const currentEnd = Math.min(currentPage * pageSize, totalAlerts);
-  const startIndex = (currentPage - 1) * pageSize;
-  const paginatedAlerts = alerts.slice(startIndex, startIndex + pageSize);
+  const safeCurrentPage = Math.min(currentPage, totalPages);
 
-  useEffect(() => {
-    setCurrentPage((page) => Math.min(page, totalPages));
-  }, [totalPages]);
+  const startIndex = (safeCurrentPage - 1) * pageSize;
+  const currentEnd = Math.min(safeCurrentPage * pageSize, totalAlerts);
+  const paginatedAlerts = alerts.slice(startIndex, startIndex + pageSize);
 
   return (
     <Card light className={styles.alert_card}>
       <div>
         <AlertHeader />
-        <AlertsList alerts={paginatedAlerts} visibleRowCount={5} />
+        <AlertList alerts={paginatedAlerts} visibleRowCount={pageSize} />
         <AlertFooter
           showingCount={currentEnd}
           totalAlerts={totalAlerts}
-          currentPage={currentPage}
+          currentPage={safeCurrentPage}
           pageSize={pageSize}
           pageSizeOptions={PAGE_SIZE_OPTIONS}
           onPageSizeChange={(value) => {

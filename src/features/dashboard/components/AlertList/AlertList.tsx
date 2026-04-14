@@ -8,7 +8,7 @@ type AlertsListProps = {
   visibleRowCount?: number;
 };
 
-export default function AlertsList({
+export default function AlertList({
   alerts,
   visibleRowCount = 5,
 }: AlertsListProps) {

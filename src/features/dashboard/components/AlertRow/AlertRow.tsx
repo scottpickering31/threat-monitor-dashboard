@@ -4,6 +4,7 @@ import Badge from "@/components/ui/Badge/Badge";
 import { alertDeviceIcons } from "@/mocks/data/alertDeviceIcons";
 import { Circle } from "lucide-react";
 import clsx from "clsx";
+import Button from "@/components/ui/Button/Button";
 
 type AlertRowProps = {
   alert: AlertCardMockTypes;
@@ -39,9 +40,9 @@ export default function AlertRow({ alert }: AlertRowProps) {
         <p className={styles.status}>{alert.status}</p>
       </div>
 
-      <button className={styles.resolveButton} type="button">
+      <Button type="button" variant="primary" size="sm">
         Resolve
-      </button>
+      </Button>
     </div>
   );
 }
